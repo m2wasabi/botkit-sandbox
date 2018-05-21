@@ -19,3 +19,7 @@ var bot = controller.spawn({
 controller.hears('hello','direct_message', function(bot, message) {
     bot.reply(message,'Hello yourself!');
 });
+
+controller.hears('time','direct_message', function(bot, message) {
+    bot.reply(message, ':+1:' + new Date().toLocaleDateString() );
+});
